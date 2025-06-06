@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <a href="aloow.html"> </a>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Ribbon Bar Styling */
+    .ribbon-bar {
+      background-color: #f0f0f0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .share-button {
+      background-color: blue;
+      color: white;
+      font-size: 16px;
+      font-family: "Times New Roman", Times, serif;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .share-button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Recipe List Modal */
+    .recipe-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      display: none;
+      z-index: 1000;
+      max-width: 90%;
+    }
+
+    .recipe-modal h2 {
+      margin-top: 0;
+      font-size: 20px;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .recipe-modal ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .recipe-modal li {
+      margin: 10px 0;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .recipe-modal li:hover {
+      background-color: #f9f9f9;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Ribbon Bar -->
+<div class="ribbon-bar">
+  <div class="logo">Recipe Finder</div>
+  <button class="share-button" id="share-recipe"> SHARE RECIPE</button>
+</div>
+
+<!-- Recipe Selection Modal -->
+<div class="modal-overlay" id="modal-overlay"></div>
+<div class="recipe-modal" id="recipe-modal">
+  <h2>Select a Recipe to Share</h2>
+  <ul id="recipe-list">
+    <li data-title="Chocolate Cake" data-description="Delicious chocolate cake recipe!">
+      CHOCOLATE CAKE
+    </li>
+    <!-- <li data-title="Spaghetti Bolognese" data-description="Classic Italian pasta recipe!">
+      Spaghetti Bolognese -->
+    </li>
+    <li data-title="Pancakes" data-description="Fluffy pancakes for breakfast!">
+      PANCAKES
+    </li>
+    <li data-title="shakes" data-description="Fluffy pancakes for breakfast!">
+        SHAKES
+      </li>
+      <li data-title="cookies" data-description="Fluffy pancakes for breakfast!">
+        COOKIES
+      </li>
+      <li data-title="pasteries" data-description="Fluffy pancakes for breakfast!">
+        PASTRIES
+      </li>
+      <li data-title="indian swweets" data-description="Fluffy pancakes for breakfast!">
+        INDIAN SWEETS
+      </li>
+      <li data-title="all type  of cake" data-description="Fluffy pancakes for breakfast!">
+    ALL TYPE OF CAKES
+      </li>
+  </ul>
+</div>
+
+<script>
+  const shareButton = document.getElementById('share-recipe');
+  const recipeModal = document.getElementById('recipe-modal');
+  const modalOverlay = document.getElementById('modal-overlay');
+  const recipeList = document.getElementById('recipe-list');
+
+  // Show the recipe selection modal
+  shareButton.addEventListener('click', () => {
+    recipeModal.style.display = 'block';
+    modalOverlay.style.display = 'block';
+  });
+
+  // Close modal when clicking on the overlay
+  modalOverlay.addEventListener('click', () => {
+    recipeModal.style.display = 'none';
+    modalOverlay.style.display = 'none';
+  });
+
+  // Handle recipe selection
+  recipeList.addEventListener('click', async (event) => {
+    const selectedRecipe = event.target;
+    const recipeTitle = selectedRecipe.dataset.title;
+    const recipeDescription = selectedRecipe.dataset.description;
+    const recipeURL = window.location.href;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: recipeTitle,
+          text: recipeDescription,
+          url: recipeURL
+        });
+        console.log("Recipe shared successfully!");
+      } catch (error) {
+        console.error("Error sharing recipe:", error);
+      }
+    } else {
+      alert("Sharing not supported on this browser. Copy the link to share.");
+    }
+
+    // Close the modal after sharing
+    recipeModal.style.display = 'none';
+    modalOverlay.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

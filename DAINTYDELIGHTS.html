@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dainty delights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="DAINTYDELIGHTS.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Modal Structure -->
+  <div id="auth-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        
+        <!-- Navigation between Login and Sign-Up -->
+        <div class="tab-buttons">
+            <button id="loginTab" onclick="showLogin()">Login</button>
+            <button id="signUpTab" onclick="showSignUp()">Sign Up</button>
+        </div>
+        
+        <!-- Login Form -->
+        <div id="loginForm" class="form-content">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <button onclick="continueAsGuest()">Continue as Guest</button>
+        </div>
+        
+        <!-- Sign-Up Form -->
+        <div id="signUpForm" class="form-content" style="display:none;">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <button onclick="continueAsGuest()">Continue as Guest</button>
+        </div>
+    </div>
+</div>
+
+    <header>
+        <div class="container">
+          <h1 class ="logo">DAINTY DELIGHTS</h1>
+            <NAV>
+               <UL CLASS = "nav-list">
+                <li><a href="DAINTYDELIGHTS.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="savedrecipe.html">SAVED RECIPES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="shoppinglist.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i>Shopping List</a></li>
+                <li><a href="shareoption.html">SHARE</a></li>
+                </UL>
+            </NAV>
+        </div>
+    </header> 
+
+    <section class="hero">
+      <div class="hero-section">
+        
+
+        <h2> WELCOME TO DAINTY DELIGHTS!</h2>
+        <p><marquee>SEARCH FOR MOUTH WATERING DESERT RECIPES TO SATISFY YOUR CRAVINGS</marquee></p>
+        
+        <form action="#" class="search-box">
+            <input type="text" class="search-box" placeholder="Search Recipes">
+            <button type="submit" class="search-btn">search</button>
+        </form>  
+      </div>
+    </section>
+
+
+    <SECTION CLASS="RECIPES">
+    <H2> FEATURED RECIPES </H2>
+    <h3> CAKES</h3>
+    <div CLASS="RECIPE-SECTION">
+      <div class=" recipe-card">
+        <img src="IMG-20241106-WA0064.jpg" alt=" red velvet cake" class="recipe-img">
+        <h2> RED VELVET CAKE</h2>
+        <P> AMERICAN DESSERT</P>
+        <div class="recipe-text">
+        <ul>
+          <h4>Ingredients For the Cake:</h4>
+          <li>2 ½ cups all-purpose flour</li>
+          <li>1 ½ cups sugar</li>
+          <li>1 teaspoon baking soda</li>
+          <li>1 teaspoon salt</li>
+          <li>1 teaspoon cocoa powder</li>
+          <li>1 ½ cups vegetable oil</li>
+          <li>1 cup buttermilk (room temperature)</li>
+          <li>2 eggs (room temperature)</li>
+          <li>2 tablespoons red food coloring</li>
+          <li>1 teaspoon vanilla extract</li>
+          <li>1 teaspoon white vinegar</li>
+          <h4>For the Frosting:</h4>
+          <li>2 packages cream cheese(softened)</li>
+          <li>1 cup butter (softened)</li>
+          <li>4 cups powdered sugar</li>
+          <li>1 teaspoon vanilla extract</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Preheat & Prepare: Preheat oven to 350°F (175°C). Grease two 9-inch pans.</li>
+          <li>Mix Batter: Combine dry ingredients and mix wet ingredients and combine with dry ingredients.</li>
+          <li>Bake: Divide batter into pans and bake for 25–30 minutes. Cool completely.</li>
+          <li>Make Frosting: Beat cream cheese, butter, powdered sugar, and vanilla until smooth.</li>
+          <li>Assemble: Layer cakes with frosting, frost the sides, and decorate.</li>
+        </ul>
+      </div>
+      <button class="save-recipe-btn" data-title="Red Velvet Cake">Save Recipe</button>
+      <button class="unsave-recipe-btn" data-title="Red Velvet Cake" style="display: none;">Unsave Recipe</button>
+      </div>
+
+      <div class=" recipe-card">
+        <img src="IMG-20241106-WA0074.jpg" alt=" CHOCOLATE CAKE cake">
+        <h2> CHOCOLATE CAKE</h2>
+        <P> AMERICAN DESSERT</P>
+        <div class="recipe-text">
+          <ul>
+            <h4>Ingredients For the Cake:</h4>
+            <li>2 cups all-purpose flour</li>
+            <li>2 cups sugar</li>
+            <li>3/4 cup unsweetened cocoa powder</li>
+            <li>1 1/2 teaspoons baking powder</li>
+            <li>1 1/2 teaspoons baking soda</li>
+            <li>1 teaspoon salt</li>
+            <li>2 eggs</li>
+            <li>1 cup milk</li>
+            <li>1/2 cup vegetable oil</li>
+            <li>2 teaspoons vanilla extract</li>
+            <li>1 cup boiling water</li>
+            <h4>For the Chocolate Buttercream Frosting:</h4>
+            <li>1 cup butter, softened</li>
+            <li>3 1/2 cups powdered sugar</li>
+            <li>1/2 cup cocoa powder</li>
+            <li>1/4 cup milk</li>
+            <li>2 teaspoons vanilla extract</li>
+            <li>1/2 teaspoon salt</li>
+          </ul>
+          <ul>
+            <h4>Procedure:</h4>
+            <li>Preheat oven to 350°F (175°C). Grease and flour two 9-inch round pans.</li>
+            <li>In a large bowl, mix dry ingredients.</li>
+            <li>Add eggs, milk, oil, and vanilla extract. Mix until smooth.</li>
+            <li>Stir in boiling water (batter will be thin).</li>
+            <li>Pour batter into prepared pans.</li>
+            <li>Bake for 30–35 minutes, or until a toothpick inserted comes out clean.</li>
+            <li>Cool completely before frosting.</li>
+          </ul>
+        </div>
+        <button class="save-recipe-btn" data-title="Chocolate Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Chocolate Cake" style="display: none;">Unsave Recipe</button>
+      </div>
+
+      <div class=" recipe-card">
+        <img src="IMG-20241106-WA0069.jpg" alt=" BLACK FOREST cake">
+        <h2> BLACK FOREST CAKE</h2>
+        <P> GERMAN DESSERT</P>
+        <div class="recipe-text">
+          <ul>
+            <h4>Ingredients for the Cake:</h4>
+            <li>2 cups all-purpose flour</li>
+            <li>1 1/2 cups sugar</li>
+            <li>1/2 cup cocoa powder</li>
+            <li>1 1/2 teaspoons baking powder</li>
+            <li>1 teaspoon baking soda</li>
+            <li>1/2 teaspoon salt</li>
+            <li>2 eggs</li>
+            <li>1 cup milk</li>
+            <li>1/2 cup vegetable oil</li>
+            <li>2 teaspoons vanilla extract</li>
+            <li>1 cup boiling water</li>
+            <li>1 jar of cherries (about 12 ounces), drained</li>
+            <li>1 cup heavy cream (for frosting)</li>
+            <li>2 tablespoons powdered sugar</li>
+            <li>2 tablespoons cherry liqueur (optional)</li>
+          </ul>
+          <ul>
+            <h4>Procedure:</h4>
+            <li>Preheat oven to 350°F (175°C). Grease and flour two 9-inch round pans.</li>
+            <li>Mix the dry ingredients, then add eggs, milk, oil, and vanilla. Mix until smooth.</li>
+            <li>Stir in boiling water (batter will be thin).</li>
+            <li>Pour into pans and bake for 30–35 minutes.</li>
+            <li>Allow to cool completely. Slice cakes in half horizontally.</li>
+          </ul>
+          <ul>
+            <h4>Frosting:</h4>
+            <li>Whip the heavy cream with powdered sugar until stiff peaks form.</li>
+            <li>Layer cake with whipped cream and cherries. Drizzle with cherry liqueur for extra flavor.</li>
+          </ul>
+        </div>
+        <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>
+      </div>
+
+      <div class=" recipe-card">
+        <img src="IMG-20241106-WA0067.jpg" alt=" cheesecake">
+        <h2> CHEESECAKE</h2>
+        <P> GREEK DESSERT</P>
+        <div class="recipe-text">
+          <ul>
+            <h4>Ingredients for the Cake:</h4>
+            <li>2 cups graham cracker crumbs</li>
+            <li>1/2 cup melted butter</li>
+            <li>1/4 cup sugar</li>
+            <li>4 packages (8 ounces each) cream cheese, softened</li>
+            <li>1 cup sugar</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>4 large eggs</li>
+            <li>Optional toppings: Nutella, blueberry compote, caramel sauce, or fresh fruit</li>
+          </ul>
+          <ul>
+            <h4>Procedure:</h4>
+            <li>Preheat oven to 325°F (160°C). Grease a 9-inch springform pan.</li>
+            <li>Mix graham cracker crumbs, melted butter, and sugar. Press into the bottom of the pan to form a crust.</li>
+            <li>Bake the crust for 10 minutes. Set aside to cool.</li>
+            <li>In a large bowl, beat cream cheese, sugar, and vanilla until smooth.</li>
+            <li>Add eggs one at a time, beating on low speed just until combined.</li>
+            <li>Pour the mixture over the cooled crust and smooth the top.</li>
+            <li>Bake for 50–60 minutes or until the center is almost set.</li>
+            <li>Cool completely at room temperature, then refrigerate for at least 4 hours or overnight.</li>
+          </ul>
+          <ul>
+            <h4>Topping Suggestions:</h4>
+            <li>Spread Nutella over the chilled cheesecake for a chocolate hazelnut flavor.</li>
+            <li>Top with blueberry compote for a fruity twist.</li>
+            <li>Drizzle caramel sauce or serve with fresh fruit like strawberries or raspberries.</li>
+          </ul>
+        </div>
+        <button class="save-recipe-btn" data-title="CheeseCake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="CheeseCake" style="display: none;">Unsave Recipe</button>
+      </div>
+
+      <div class=" recipe-card">
+        <img src="IMG-20241106-WA0061.jpg"alt ="VANILLA cake">
+        <h2> VANILLA CAKE</h2>
+        <P> AUSTRALIAN DESSERT</P>
+        <div class="recipe-text">
+          <ul>
+            <h4>Ingredients for the Cake:</h4>
+            <li>2 1/2 cups all-purpose flour</li>
+            <li>2 1/2 teaspoons baking powder</li>
+            <li>1/2 teaspoon salt</li>
+            <li>3/4 cup unsalted butter, softened</li>
+            <li>1 3/4 cups sugar</li>
+            <li>4 large eggs</li>
+            <li>1 tablespoon vanilla extract</li>
+            <li>1 cup whole milk</li>
+            <li>1 cup heavy cream (for frosting)</li>
+            <li>1/4 cup powdered sugar (for frosting)</li>
+            <li>1 teaspoon vanilla extract (for frosting)</li>
+          </ul>
+          <ul>
+            <h4>Procedure:</h4>
+            <li>Preheat oven to 350°F (175°C). Grease and flour two 9-inch round pans.</li>
+            <li>In a bowl, mix flour, baking powder, and salt.</li>
+            <li>In a separate bowl, beat butter and sugar until light and fluffy. Add eggs one at a time, then stir in vanilla extract.</li>
+            <li>Alternate adding dry ingredients and milk to the butter mixture, starting and ending with the dry ingredients. Mix until smooth.</li>
+            <li>Divide the batter evenly between the pans and bake for 25–30 minutes, or until a toothpick inserted in the center comes out clean.</li>
+            <li>Let the cakes cool completely before frosting.</li>
+          </ul>
+          <ul>
+            <h4>Frosting:</h4>
+            <li>Whip the heavy cream with powdered sugar and vanilla extract until stiff peaks form.</li>
+            <li>Spread frosting between the cake layers, on the top, and around the sides.</li>
+            <li>Optional: Decorate with sprinkles, fresh fruit, or edible flowers.</li>
+          </ul>
+        </div>
+        <button class="save-recipe-btn" data-title="Vanilla Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Vanilla Cake" style="display: none;">Unsave Recipe</button>
+      </div>
+
+      <div class=" recipe-card">
+        <img src="IMG-20241106-WA0073.jpg" alt=" coffee cake">
+        <h2> COFFEE CAKE</h2>
+        <P> EUROPIAN DESSERT</P>
+        <div class="recipe-text">
+          <ul>
+            <h4>Ingredients for the Cake:</h4>
+            <li>2 cups all-purpose flour</li>
+            <li>1 1/2 teaspoons baking powder</li>
+            <li>1/2 teaspoon baking soda</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1/2 cup unsalted butter, softened</li>
+            <li>1 cup sugar</li>
+            <li>2 large eggs</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>3/4 cup brewed coffee, cooled</li>
+            <li>1/4 cup sour cream</li>
+            <li>1 cup heavy cream (for frosting)</li>
+            <li>1/4 cup powdered sugar (for frosting)</li>
+            <li>1 teaspoon espresso powder (optional, for frosting)</li>
+          </ul>
+          <ul>
+            <h4>Procedure:</h4>
+            <li>Preheat oven to 350°F (175°C). Grease and flour two 8-inch round pans.</li>
+            <li>In a bowl, combine flour, baking powder, baking soda, and salt.</li>
+            <li>Cream butter and sugar until light and fluffy. Add eggs one at a time, then vanilla.</li>
+            <li>Alternate adding the dry ingredients, coffee, and sour cream to the butter mixture, mixing until smooth.</li>
+            <li>Divide the batter evenly between the pans and bake for 25–30 minutes, or until a toothpick inserted in the center comes out clean.</li>
+            <li>Let cakes cool completely before frosting.</li>
+          </ul>
+          <ul>
+            <h4>Frosting:</h4>
+            <li>Whip heavy cream with powdered sugar and espresso powder (if using) until stiff peaks form.</li>
+            <li>Spread frosting between the cake layers and over the top and sides.</li>
+            <li>Optional: Dust with cocoa powder or top with chocolate shavings for decoration.</li>
+          </ul>
+        </div> 
+        <button class="save-recipe-btn" data-title="Coffee Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Coffee Cake" style="display: none;">Unsave Recipe</button>       
+      </div>
+
+      <div class=" recipe-card">
+        <img src="IMG-20241106-WA0075.jpg" alt=" COCONUT cake">
+        <h2>COCONUT CAKE</h2>
+        <P> AMERICAN DESSERT</P>
+        <div class="recipe-text">
+          <ul>
+            <h4>Ingredients for the Cake:</h4>
+            <li>2 1/4 cups all-purpose flour</li>
+            <li>2 teaspoons baking powder</li>
+            <li>1/2 teaspoon baking soda</li>
+            <li>1/4 teaspoon salt</li>
+            <li>3/4 cup unsalted butter, softened</li>
+            <li>1 3/4 cups sugar</li>
+            <li>3 large eggs</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>1 teaspoon coconut extract</li>
+            <li>1 cup coconut milk</li>
+            <li>1 cup shredded coconut (unsweetened)</li>
+            <li>1 cup heavy cream (for frosting)</li>
+            <li>1/4 cup powdered sugar (for frosting)</li>
+            <li>1/2 teaspoon coconut extract (for frosting)</li>
+          </ul>
+          <ul>
+            <h4>Procedure:</h4>
+            <li>Preheat oven to 350°F (175°C). Grease and flour two 9-inch round pans.</li>
+            <li>In a bowl, combine flour, baking powder, baking soda, and salt.</li>
+            <li>Cream butter and sugar until light and fluffy. Add eggs one at a time, then vanilla and coconut extracts.</li>
+            <li>Alternate adding the dry ingredients and coconut milk to the butter mixture, mixing until smooth.</li>
+            <li>Fold in the shredded coconut.</li>
+            <li>Divide the batter evenly between the pans and bake for 30–35 minutes, or until a toothpick inserted in the center comes out clean.</li>
+            <li>Let cakes cool completely before frosting.</li>
+          </ul>
+          <ul>
+            <h4>Frosting:</h4>
+            <li>Whip heavy cream with powdered sugar and coconut extract until stiff peaks form.</li>
+            <li>Spread frosting between the cake layers and over the top and sides.</li>
+            <li>Optional: Sprinkle with toasted coconut flakes for decoration.</li>
+          </ul>
+        </div> 
+        <button class="save-recipe-btn" data-title="Coconut Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Coconut Cake" style="display: none;">Unsave Recipe</button>       
+      </div>
+
+      <div class=" recipe-card">
+        <img src="IMG-20241106-WA0066.jpg" alt=" BANANA cake">
+        <h2> BANANA CAKE</h2>
+        <P> VIETNAMESE/ INDONESIAN DESSERT</P>
+        <div class="recipe-text">
+          <ul>
+            <h4>Ingredients for the Cake:</h4>
+            <li>2 cups all-purpose flour</li>
+            <li>1 teaspoon baking soda</li>
+            <li>1/4 teaspoon salt</li>
+            <li>1/2 cup unsalted butter, softened</li>
+            <li>3/4 cup sugar</li>
+            <li>1/4 cup brown sugar</li>
+            <li>2 large eggs</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>1/2 cup sour cream</li>
+            <li>1 1/2 cups mashed ripe bananas (about 3 large bananas)</li>
+            <li>Optional: 1/2 cup chopped walnuts or chocolate chips</li>
+          </ul>
+          <ul>
+            <h4>Procedure:</h4>
+            <li>Preheat oven to 350°F (175°C). Grease and flour a 9x13-inch pan.</li>
+            <li>In a bowl, combine flour, baking soda, and salt.</li>
+            <li>Cream butter, sugar, and brown sugar until fluffy. Add eggs one at a time, then stir in vanilla.</li>
+            <li>Mix in sour cream and mashed bananas until combined.</li>
+            <li>Gradually add dry ingredients to the wet ingredients, mixing until just combined. Fold in walnuts or chocolate chips if using.</li>
+            <li>Pour batter into the prepared pan and bake for 30–35 minutes, or until a toothpick inserted in the center comes out clean.</li>
+            <li>Let cool completely before slicing and serving.</li>
+          </ul>
+        </div> 
+        <button class="save-recipe-btn" data-title="Banana Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Banana Cake" style="display: none;">Unsave Recipe</button>       
+      </div>
+      
+      <div class=" recipe-card">
+        <img src="IMG-20241106-WA0065.jpg" ALT=" fruitcake cake">
+        <h2> FRUITCAKE</h2>
+        <P> EUROPIAN DESSERT</P>
+        <div class="recipe-text">
+          <ul>
+            <h4>Ingredients for the Cake:</h4>
+            <li>1 cup unsalted butter, softened</li>
+            <li>1 cup brown sugar</li>
+            <li>4 large eggs</li>
+            <li>1/4 cup orange juice</li>
+            <li>2 cups all-purpose flour</li>
+            <li>1 teaspoon baking powder</li>
+            <li>1 teaspoon ground cinnamon</li>
+            <li>1/2 teaspoon ground nutmeg</li>
+            <li>1/2 teaspoon salt</li>
+            <li>2 cups mixed dried fruit (raisins, cranberries, chopped apricots)</li>
+            <li>1 cup chopped nuts (walnuts, pecans, or almonds)</li>
+            <li>Optional: 1/4 cup brandy or rum (for soaking dried fruit)</li>
+          </ul>
+          <ul>
+            <h4>Procedure:</h4>
+            <li>Preheat oven to 325°F (160°C). Grease and line an 8-inch round pan with parchment paper.</li>
+            <li>If using, soak dried fruit in brandy or rum overnight. Drain before using.</li>
+            <li>Cream butter and brown sugar until fluffy. Add eggs one at a time, beating well after each addition.</li>
+            <li>Mix in orange juice.</li>
+            <li>In a separate bowl, combine flour, baking powder, cinnamon, nutmeg, and salt.</li>
+            <li>Gradually add the dry ingredients to the wet mixture, mixing until combined.</li>
+            <li>Fold in dried fruit and chopped nuts.</li>
+            <li>Pour batter into the prepared pan and bake for 75–90 minutes, or until a toothpick inserted in the center comes out clean.</li>
+            <li>Cool completely before serving. Optional: Wrap in plastic and store for a few days to enhance flavor.</li>
+          </ul>
+        </div>
+        <button class="save-recipe-btn" data-title="Fruit Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Fruit Cake" style="display: none;">Unsave Recipe</button>        
+      </div>
+
+      <div class=" recipe-card">
+        <img src="IMG-20241106-WA0062.jpg" alt=" CARROT cake">
+        <h2> CARROT CAKE</h2>
+        <P> EUROPIAN DESSERT</P>
+        <div class="recipe-text">
+          <ul>
+            <h4>Ingredients for the Cake:</h4>
+            <li>2 cups all-purpose flour</li>
+            <li>2 teaspoons baking powder</li>
+            <li>1 teaspoon baking soda</li>
+            <li>1/2 teaspoon salt</li>
+            <li>2 teaspoons ground cinnamon</li>
+            <li>1/2 teaspoon ground nutmeg</li>
+            <li>3/4 cup vegetable oil</li>
+            <li>1 cup sugar</li>
+            <li>1/2 cup brown sugar</li>
+            <li>3 large eggs</li>
+            <li>2 teaspoons vanilla extract</li>
+            <li>2 cups grated carrots</li>
+            <li>1/2 cup chopped walnuts (optional)</li>
+            <li>1 cup heavy cream (for frosting)</li>
+            <li>1/4 cup powdered sugar (for frosting)</li>
+            <li>1 teaspoon vanilla extract (for frosting)</li>
+          </ul>
+          <ul>
+            <h4>Procedure:</h4>
+            <li>Preheat oven to 350°F (175°C). Grease and flour two 9-inch round pans.</li>
+            <li>In a bowl, combine flour, baking powder, baking soda, salt, cinnamon, and nutmeg.</li>
+            <li>In a separate bowl, mix vegetable oil, sugar, brown sugar, eggs, and vanilla until smooth.</li>
+            <li>Gradually add the dry ingredients to the wet mixture, mixing until just combined.</li>
+            <li>Fold in grated carrots and walnuts if using.</li>
+            <li>Divide batter between the pans and bake for 30–35 minutes, or until a toothpick inserted in the center comes out clean.</li>
+            <li>Cool completely before frosting.</li>
+          </ul>
+          <ul>
+            <h4>Frosting:</h4>
+            <li>Whip heavy cream with powdered sugar and vanilla extract until stiff peaks form.</li>
+            <li>Spread frosting between the cake layers and over the top and sides.</li>
+            <li>Optional: Decorate with grated carrot or chopped nuts.</li>
+          </ul>
+        </div>  
+        <button class="save-recipe-btn" data-title="Carrot Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Carrot Cake" style="display: none;">Unsave Recipe</button>      
+      </div>
+    </div>
+   </SECTION>
+
+
+   <section class=" cookies">
+    <h3> COOKIES</h3>
+    <div class="cookies-section">
+    <div class="cookies-card">
+      <img src="IMG-20241106-WA0072.jpg" alt="chocochip cookies pic">
+      <h2> CHOCOCHIP COOKIES </h2>
+      <P> AMERICAN DESSERT</P>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients for the Cookie:</h4>
+          <li>2 1/4 cups all-purpose flour</li>
+          <li>1/2 teaspoon baking soda</li>
+          <li>1/2 teaspoon salt</li>
+          <li>3/4 cup unsalted butter, melted</li>
+          <li>1 cup brown sugar</li>
+          <li>1/2 cup granulated sugar</li>
+          <li>1 large egg + 1 egg yolk</li>
+          <li>2 teaspoons vanilla extract</li>
+          <li>1 1/2 cups chocolate chips</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Preheat oven to 350°F (175°C). Line baking sheets with parchment paper.</li>
+          <li>In a bowl, combine flour, baking soda, and salt.</li>
+          <li>In another bowl, mix melted butter, brown sugar, and granulated sugar until smooth.</li>
+          <li>Beat in the egg, egg yolk, and vanilla extract.</li>
+          <li>Gradually stir in dry ingredients until just combined. Fold in chocolate chips.</li>
+          <li>Scoop dough onto baking sheets and bake for 10–12 minutes or until edges are golden.</li>
+          <li>Cool on wire racks before serving.</li>
+        </ul>
+      </div>
+      <button class="save-recipe-btn" data-title="Chocochip Cookies">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Chocochip Cookies" style="display: none;">Unsave Recipe</button>      
+    </div>
+
+    <div class="cookies-card">
+      <img src="IMG-20241106-WA0070.jpg" alt="PEANUT BUTTER COOKIES">
+      <h2> PEANUT BUTTTER COOKIES </h2>
+      <P> SOUTH AMERICAN DESSERT</P>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>1 cup peanut butter</li>
+          <li>1 cup granulated sugar</li>
+          <li>1 large egg</li>
+          <li>1 teaspoon vanilla extract</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Preheat oven to 350°F (175°C). Line a baking sheet with parchment paper.</li>
+          <li>Mix peanut butter, sugar, egg, and vanilla in a bowl until well combined.</li>
+          <li>Roll dough into balls and place on the baking sheet. Flatten with a fork in a crisscross pattern.</li>
+          <li>Bake for 10–12 minutes or until edges are firm. Let cool before serving.</li>
+        </ul>
+      </div> 
+      <button class="save-recipe-btn" data-title="Peanut Butter Cookies">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Peanut Butter Cookies" style="display: none;">Unsave Recipe</button>     
+    </div>
+
+    <div class="cookies-card">
+      <img src="IMG-20241106-WA0057.jpg" alt="BISCOTTI cookies pic">
+      <h2> BISCOTTI COOKIES </h2>
+      <P> ITALIAN DESSERT</P>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>2 cups all-purpose flour</li>
+          <li>1 teaspoon baking powder</li>
+          <li>1/4 teaspoon salt</li>
+          <li>1/2 cup sugar</li>
+          <li>1/2 cup brown sugar</li>
+          <li>2 large eggs</li>
+          <li>1 teaspoon vanilla extract</li>
+          <li>1/2 cup chopped nuts or dried fruit</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Preheat oven to 350°F (175°C). Line a baking sheet with parchment paper.</li>
+          <li>Mix flour, baking powder, and salt in a bowl.</li>
+          <li>In another bowl, beat sugar, eggs, and vanilla. Gradually add dry ingredients, then fold in nuts or dried fruit.</li>
+          <li>Form dough into a log and bake for 25 minutes. Cool slightly, then slice into 1-inch pieces.</li>
+          <li>Bake slices for 10 minutes on each side until crisp.</li>
+        </ul>
+      </div> 
+      <button class="save-recipe-btn" data-title="Biscotti Cookies">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Biscotti Cookies" style="display: none;">Unsave Recipe</button>     
+    </div>
+
+    <div class="cookies-card">
+      <img src="IMG-20241106-WA0063.jpg" alt="BUTTER cookies pic">
+      <h2> BUTTER COOKIES </h2>
+      <P> EUROPIAN DESSERT</P>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>1 cup unsalted butter, softened</li>
+          <li>1 cup sugar</li>
+          <li>1 large egg</li>
+          <li>2 teaspoons vanilla extract</li>
+          <li>2 1/2 cups all-purpose flour</li>
+          <li>1/2 teaspoon salt</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Preheat oven to 350°F (175°C). Line baking sheets with parchment paper.</li>
+          <li>Cream butter and sugar until light and fluffy. Add egg and vanilla, mixing well.</li>
+          <li>Gradually add flour and salt, mixing until combined.</li>
+          <li>Pipe or scoop dough onto baking sheets and bake for 10–12 minutes.</li>
+          <li>Cool on wire racks before serving.</li>
+        </ul>
+      </div> 
+      <button class="save-recipe-btn" data-title="Butter Cookies">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Butter Cookies" style="display: none;">Unsave Recipe</button>     
+    </div>
+
+    <div class="cookies-card">
+      <img src="IMG-20241106-WA0068.jpg" alt=" SUGARcookies pic">
+      <h2> SUGAR COOKIES </h2>
+      <P> GERMAN DESSERT</P>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>3 cups all-purpose flour</li>
+          <li>1 teaspoon baking powder</li>
+          <li>1/2 teaspoon salt</li>
+          <li>1 cup unsalted butter, softened</li>
+          <li>1 cup sugar</li>
+          <li>1 large egg</li>
+          <li>1 teaspoon vanilla extract</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Preheat oven to 350°F (175°C). Line baking sheets with parchment paper.</li>
+          <li>Mix flour, baking powder, and salt.</li>
+          <li>Cream butter and sugar until fluffy. Add egg and vanilla and beat well.</li>
+          <li>Gradually add dry ingredients, mixing until dough forms. Chill for 30 minutes.</li>
+          <li>Roll out dough, cut shapes, and bake for 8–10 minutes or until edges are golden.</li>
+          <li>Cool completely before decorating.</li>
+        </ul>
+      </div>
+      <button class="save-recipe-btn" data-title="Sugar Cookies">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Sugar Cookies" style="display: none;">Unsave Recipe</button>      
+    </div>
+
+    <div class="cookies-card">
+      <img src="IMG-20241106-WA0060.jpg" alt="DROP cookies pic">
+      <h2> DROP COOKIES </h2>
+      <P> PERSIAN DESSERT</P>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>2 cups all-purpose flour</li>
+          <li>1 teaspoon baking powder</li>
+          <li>1/4 teaspoon salt</li>
+          <li>1 cup unsalted butter, softened</li>
+          <li>1 cup sugar</li>
+          <li>1 large egg</li>
+          <li>1 teaspoon vanilla extract</li>
+          <li>Optional: chocolate chips, nuts, or dried fruit</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Preheat oven to 350°F (175°C). Line baking sheets with parchment paper.</li>
+          <li>Cream butter and sugar. Add egg and vanilla, mixing well.</li>
+          <li>Gradually add dry ingredients, mixing until combined. Fold in optional ingredients.</li>
+          <li>Drop dough onto baking sheets and bake for 10–12 minutes.</li>
+          <li>Cool completely before serving.</li>
+        </ul>
+      </div> 
+      <button class="save-recipe-btn" data-title="Drop Cookies">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Drop Cookies" style="display: none;">Unsave Recipe</button>     
+    </div>
+
+    <div class="cookies-card">
+      <img src="IMG-20241106-WA0071.jpg" alt="MACARON pic">
+      <h2> MACARON COOKIES </h2>
+      <P> ITALIAN DESSERT</P>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>1 3/4 cups powdered sugar</li>
+          <li>1 cup almond flour</li>
+          <li>3 large egg whites</li>
+          <li>1/4 cup sugar</li>
+          <li>1/2 teaspoon vanilla extract</li>
+          <li>Optional: food coloring</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Preheat oven to 300°F (150°C). Line baking sheets with parchment paper.</li>
+          <li>Mix powdered sugar and almond flour. Sift to remove lumps.</li>
+          <li>Beat egg whites until foamy, then add sugar gradually. Beat to stiff peaks.</li>
+          <li>Fold dry ingredients into meringue. Add food coloring if desired.</li>
+          <li>Pipe circles onto baking sheets. Rest for 30 minutes to form a skin.</li>
+          <li>Bake for 15–18 minutes. Let cool before filling with buttercream or ganache.</li>
+        </ul>
+      </div>
+      <button class="save-recipe-btn" data-title="Macaron Cookies">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Macaron Cookies" style="display: none;">Unsave Recipe</button>      
+    </div>
+
+    <div class="cookies-card">
+      <img src="IMG-20241106-WA0058.jpg" alt="thumbprint cookies pic">
+      <h2> THUMBPRINT COOKIES </h2>
+      <P> SWEDISH DESSERT</P>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>1 cup unsalted butter, softened</li>
+          <li>2/3 cup sugar</li>
+          <li>2 large egg yolks</li>
+          <li>1 teaspoon vanilla extract</li>
+          <li>2 cups all-purpose flour</li>
+          <li>1/2 teaspoon salt</li>
+          <li>1/2 cup jam (any flavor)</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Preheat oven to 350°F (175°C). Line baking sheets with parchment paper.</li>
+          <li>Cream butter and sugar. Mix in egg yolks and vanilla.</li>
+          <li>Add flour and salt, mixing until dough forms.</li>
+          <li>Roll dough into balls and place on baking sheets. Press thumb into each ball to form an indent.</li>
+          <li>Fill indents with jam and bake for 12–15 minutes.</li>
+          <li>Cool before serving.</li>
+        </ul>
+      </div>
+      <button class="save-recipe-btn" data-title="Thumbprint Cookies">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Thumbprint Cookies" style="display: none;">Unsave Recipe</button>      
+    </div>
+  </div>
+   </section>
+
+
+   <section class="shakes">
+    <h3> SHAKES</h3>
+    <div class="shakes-section">
+    <div class="shakes-card">
+      <img src="IMG-20241106-WA0059.jpg" alt="vanilla milkshake  pic">
+      <h2>VANILLA MILKSHAKE </h2>
+      <div class="recipe-text"></div>
+      <button class="save-recipe-btn" data-title="Vanilla Shake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Vanilla Shake" style="display: none;">Unsave Recipe</button>
+    </div>
+
+    <div class="shakes-card">
+      <img src="IMG-20241106-WA0051.jpg" alt="blueberry milkshake  pic">
+      <h2>BLUEBERRY MILKSHAKE </h2>
+      <div class="recipe-text"></div>
+      <button class="save-recipe-btn" data-title="Blueberry Shake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Blueberry Shake" style="display: none;">Unsave Recipe</button>
+    </div>
+
+    <div class="shakes-card">
+      <img src="IMG-20241106-WA0056.jpg" alt="CHOCOLATE milkshake  pic">
+      <h2>CHOCOLATE MILKSHAKE</h2>
+      <div class="recipe-text"></div>
+      <button class="save-recipe-btn" data-title="Chocolate Milkshake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Chocolate Milkshake" style="display: none;">Unsave Recipe</button>
+    </div>
+
+    <div class="shakes-card">
+      <img src="IMG-20241106-WA0055.jpg" alt="PINA COLADA  pic">
+      <h2>PINA COLADA </h2>
+      <div class="recipe-text"></div>
+      <button class="save-recipe-btn" data-title="Pina Colada">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Pina COlada" style="display: none;">Unsave Recipe</button>
+    </div>
+
+    <div class="shakes-card">
+      <img src="IMG-20241106-WA0054.jpg" alt="COOL MINT  pic">
+      <h2>COOL MINT </h2>
+      <div class="recipe-text"></div>
+      <button class="save-recipe-btn" data-title="Cool Mint">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Cool Mint" style="display: none;">Unsave Recipe</button>
+    </div>
+
+    <div class="shakes-card">
+      <img src="IMG-20241106-WA0050.jpg" alt="STRAWBERRY milkshake  pic">
+      <h2>STRAWBERRY MILKSHAKE</h2>
+      <div class="recipe-text"></div>
+      <button class="save-recipe-btn" data-title="Strawberry Shake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Strawberry Shake" style="display: none;">Unsave Recipe</button>
+    </div>
+
+    <div class="shakes-card">
+      <img src="IMG-20241106-WA0052.jpg" alt="LASSI  pic">
+      <h2>LASSI </h2>
+      <div class="recipe-text"></div>
+      <button class="save-recipe-btn" data-title="Lassi">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Lassi" style="display: none;">Unsave Recipe</button>
+    </div>
+
+    <div class="shakes-card">
+      <img src="IMG-20241106-WA0053.jpg" alt="BUTTERMILK pic">
+      <h2>BUTTERMILK </h2>
+      <div class="recipe-text"></div>
+      <button class="save-recipe-btn" data-title="Buttermilk">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Buttermilk" style="display: none;">Unsave Recipe</button>
+    </div>
+   </section>
+
+
+   <section class="pastries">
+    <h3> PASTRIES</h3>
+    <div class=" pastry-section">
+      <div class="pastry-card">
+        <img src="IMG-20241106-WA0042.jpg" alt="pineapple pastry">
+        <h2> PINEAPPLE PASTRY</h2>
+        <div class="recipe-text"></div>
+        <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>
+      </div>
+      
+        <div class="pastry-card">
+          <img src="IMG-20241106-WA0043.jpg" alt="BUTTERSCHOTH pastry">
+          <h2> BUTTERSCCOTH PASTRY</h2>
+          <div class="recipe-text"></div>
+          <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>
+        </div>
+      
+          <div class="pastry-card">
+            <img src="IMG-20241106-WA0031.jpg" alt="CHOCOLATE pastry">
+            <h2>CHOCOLATE PASTRY</h2>
+            <div class="recipe-text"></div>
+            <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+            <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>
+          </div>
+        
+            <div class="pastry-card">
+              <img src="IMG-20241106-WA0033.jpg" alt="rasmalai pastry">
+              <h2> RASMALAI PASTRY</h2>
+              <div class="recipe-text"></div>
+              <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+              <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>
+            </div>
+
+            <div class="pastry-card">
+              <img src="IMG-20241106-WA0038.jpg" alt="mango pastry">
+              <h2>MANGO PASTRY</h2>
+              <div class="recipe-text"></div>
+              <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+              <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>
+            </div>
+
+            <div class="pastry-card">
+              <img src="IMG-20241106-WA0030.jpg" alt="red velvet pastry">
+              <h2> RED VELVET PASTRY</h2>
+              <div class="recipe-text"></div>
+              <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+              <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>
+            </div>
+    </div>
+   </section>
+
+
+  <section class="breads">
+    <h3>BREADS</h3>
+    <div class="breads-section">
+      <div class="bread-card">
+        <img src="IMG-20241106-WA0046.jpg" alt="breadsticks pic">
+        <h2>BREADSTICKS</h2>
+        <div class="recipe-text"></div>
+        <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>
+      </div>
+
+      <div class="bread-card">
+        <img src="IMG-20241106-WA0044.jpg" alt="brioche pic">
+        <h2>BRIOCHE</h2>
+        <div class="recipe-text"></div>
+        <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>
+      </div>
+
+      <div class="bread-card">
+        <img src="IMG-20241106-WA0045.jpg" alt="broa pic">
+        <h2>BROA</h2>
+        <div class="recipe-text"></div>
+        <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>
+      </div>
+      
+      <div class="shakes-card">
+        <img src="IMG-20241106-WA0041.jpg" alt="brown bread pic">
+        <h2>BROWN BREAD</h2>
+        <div class="recipe-text"></div>
+        <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>
+      </div>
+    </div>
+  </section>
+
+
+   <section class="india">
+  <h3> INDIA'S  SPEACIAL SWEETDISHES </h3>
+  <div class="india-section">
+    <div class=" india-card">
+      <img src="IMG-20241106-WA0034.jpg" alt=" GULAB JAMUN PIC">
+      <h2> GULAB JAMUN</h2>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>1 cup milk powder</li>
+          <li>1/4 cup all-purpose flour</li>
+          <li>1/4 teaspoon baking soda</li>
+          <li>2 tablespoons ghee</li>
+          <li>2–3 tablespoons milk</li>
+          <li>2 cups sugar</li>
+          <li>2 cups water</li>
+          <li>4–5 cardamom pods, crushed</li>
+          <li>Oil or ghee for frying</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Mix milk powder, flour, and baking soda. Add ghee and milk to form a soft dough.</li>
+          <li>Roll dough into small balls.</li>
+          <li>Heat oil or ghee on medium-low and fry balls until golden brown.</li>
+          <li>Make sugar syrup by boiling sugar, water, and cardamom for 5 minutes.</li>
+          <li>Soak fried balls in warm syrup for 2 hours before serving.</li>
+        </ul>
+      </div> 
+      <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>     
+    </div>
+
+    <div class=" india-card">
+      <img src="IMG-20241106-WA0037.jpg" alt=" RASGULLA PIC">
+      <h2> RASGULLA</h2>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>1 liter whole milk</li>
+          <li>2 tablespoons lemon juice</li>
+          <li>1 1/2 cups sugar</li>
+          <li>4 cups water</li>
+          <li>4–5 cardamom pods, crushed</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Boil milk, then curdle it with lemon juice. Strain to separate chenna (curds).</li>
+          <li>Knead chenna until smooth and make small balls.</li>
+          <li>Boil sugar, water, and cardamom to make syrup. Add chenna balls and cook for 15–20 minutes.</li>
+          <li>Cool and refrigerate before serving.</li>
+        </ul>
+      </div> 
+      <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>     
+    </div>
+
+    <div class=" india-card">
+      <img src="IMG-20241106-WA0036.jpg" alt=" GAJAR KA HALWA PIC">
+      <h2> GAJAR KA HALWA</h2>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>1 kg grated carrots</li>
+          <li>1 liter milk</li>
+          <li>1 cup sugar</li>
+          <li>1/2 cup ghee</li>
+          <li>1/2 cup chopped nuts (cashews, almonds)</li>
+          <li>1/4 teaspoon cardamom powder</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Cook grated carrots in milk on medium heat until the milk evaporates.</li>
+          <li>Add sugar and cook for 10 minutes.</li>
+          <li>Heat ghee in a pan and roast nuts. Add to halwa along with cardamom powder.</li>
+          <li>Cook until ghee separates. Serve warm.</li>
+        </ul>
+      </div>
+      <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>      
+    </div>
+
+    <div class=" india-card">
+      <img src="IMG-20241106-WA0029.jpg" alt="KAJU BARFI PIC">
+      <h2> KAJU BARFI</h2>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>2 cups cashews</li>
+          <li>1 cup sugar</li>
+          <li>1/4 cup water</li>
+          <li>1/4 teaspoon cardamom powder</li>
+          <li>Silver leaf (optional)</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Grind cashews to a fine powder.</li>
+          <li>Make sugar syrup by boiling sugar and water to one-string consistency.</li>
+          <li>Add cashew powder and cardamom, and stir to form a dough.</li>
+          <li>Roll out the dough and cut into diamond shapes. Decorate with silver leaf if desired.</li>
+        </ul>
+      </div>  
+      <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>    
+    </div>
+
+    <div class=" india-card">
+      <img src="IMG-20241106-WA0039.jpg" alt=" RASMALAI PIC">
+      <h2> RASMALAI</h2>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>1 liter milk</li>
+          <li>2 tablespoons lemon juice</li>
+          <li>1 liter full cream milk (for rabri)</li>
+          <li>1/2 cup sugar</li>
+          <li>4–5 cardamom pods, crushed</li>
+          <li>1/4 cup chopped nuts</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Make chenna by curdling milk with lemon juice. Knead into a smooth dough and shape into flat discs.</li>
+          <li>Boil sugar and water to make syrup. Cook chenna discs in syrup for 15 minutes.</li>
+          <li>Prepare rabri by reducing milk to half, adding sugar, cardamom, and nuts.</li>
+          <li>Soak chenna discs in rabri and chill before serving.</li>
+        </ul>
+      </div> 
+      <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>     
+    </div>
+
+    <div class=" india-card">
+      <img src="IMG-20241106-WA0026.jpg" alt=" KHEER PIC">
+      <h2> KHEER</h2>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>1 liter milk</li>
+          <li>1/4 cup basmati rice</li>
+          <li>1/2 cup sugar</li>
+          <li>1/4 teaspoon cardamom powder</li>
+          <li>2 tablespoons chopped nuts</li>
+          <li>1 tablespoon raisins</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Wash rice and cook in milk on low heat, stirring occasionally.</li>
+          <li>Add sugar, cardamom, nuts, and raisins once the rice is soft and milk thickens.</li>
+          <li>Cook for another 10 minutes. Serve warm or chilled.</li>
+        </ul>
+      </div>
+      <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>      
+    </div>
+
+    <div class=" india-card">
+      <img src="IMG-20241106-WA0040.jpg" alt="NARIYAL LADDU PIC">
+      <h2> NARIYAL LADDU</h2>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>2 cups grated coconut</li>
+          <li>1 cup condensed milk</li>
+          <li>1/4 teaspoon cardamom powder</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Mix grated coconut, condensed milk, and cardamom powder in a pan.</li>
+          <li>Cook on low heat until the mixture thickens.</li>
+          <li>Shape into small balls and roll in coconut. Cool before serving.</li>
+        </ul>
+      </div> 
+      <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>     
+    </div>
+
+    <div class=" india-card">
+      <img src="IMG-20241106-WA0112.jpg" alt="ghewar pic">
+      <h2> GHEWAR</h2>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>1 cup all-purpose flour</li>
+          <li>1/4 cup ghee</li>
+          <li>1/2 cup chilled milk</li>
+          <li>1/4 teaspoon cardamom powder</li>
+          <li>2 cups sugar</li>
+          <li>Water for syrup</li>
+          <li>Ghee for frying</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Mix flour, ghee, and milk to form a thin batter.</li>
+          <li>Pour batter into hot ghee to create a net-like pattern. Fry until golden.</li>
+          <li>Prepare sugar syrup and pour over ghewar. Decorate with nuts.</li>
+        </ul>
+      </div> 
+      <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>     
+    </div>
+
+    <div class=" india-card">
+      <img src="IMG-20241106-WA0035.jpg" alt=" MOTICHOOR LADDU PIC">
+      <h2> MOTICHOOR LADDU</h2>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>1 cup gram flour</li>
+          <li>1/4 teaspoon baking soda</li>
+          <li>1/2 cup sugar</li>
+          <li>1/2 cup water</li>
+          <li>4–5 cardamom pods, crushed</li>
+          <li>2 tablespoons chopped nuts</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Make a batter with gram flour and baking soda. Fry small drops in oil until golden.</li>
+          <li>Prepare sugar syrup and mix with fried boondi. Add cardamom and nuts.</li>
+          <li>Shape into laddus once cooled slightly.</li>
+        </ul>
+      </div>
+      <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>      
+    </div>
+
+    <div class=" india-card">
+      <img src="IMG-20241106-WA0023.jpg" alt=" besan PIC">
+      <h2> BESAN LADDU</h2>
+      <div class="recipe-text">
+        <ul>
+          <h4>Ingredients:</h4>
+          <li>2 cups gram flour</li>
+          <li>1 cup ghee</li>
+          <li>1 cup powdered sugar</li>
+          <li>1/4 teaspoon cardamom powder</li>
+          <li>2 tablespoons chopped nuts</li>
+        </ul>
+        <ul>
+          <h4>Procedure:</h4>
+          <li>Roast gram flour in ghee on low heat until fragrant and golden.</li>
+          <li>Cool slightly, then mix in powdered sugar, cardamom, and nuts.</li>
+          <li>Shape into laddus and let set before serving.</li>
+        </ul>
+      </div>
+      <button class="save-recipe-btn" data-title="Black-Forest Cake">Save Recipe</button>
+        <button class="unsave-recipe-btn" data-title="Black-Forest Cake" style="display: none;">Unsave Recipe</button>      
+    </div>
+  </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Dainty Delights | Happy Cooking!</p>
+  </footer>
+
+    <script src="login.js"></script>
+    <script src="recipeshow.js"></script>
+    <script src="savedrecipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+/* Universal styles */
+* {
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Playfair Display', serif; 
+}
+
+/* Body */
+body {
+   width: 100%;
+   min-height: 100vh;
+   background-color: rgb(165, 192, 203);
+   font-size: 17px; 
+}
+
+/* Header */
+header {
+   height: 80px;
+   width: 100%;
+   background-color: rgba(150, 114, 158, 0.734);
+   display: flex;
+   align-items: center;
+}
+
+/* Container */
+.container {
+   width: 90%;
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+}
+
+/* Navigation */
+nav ul li {
+   list-style-type: none;
+   display: inline;
+   margin-right: 20px;
+   font-weight: 600;
+   font-size: 19px;
+}
+
+/* Logo */
+.logo {
+   font-size: 32px;
+   text-align: left;
+}
+
+/* Hero Section */
+.hero {
+   width: 100%;
+   height: 400px;
+   background-image: url(background.webp);
+   background-position: center;
+   background-size: cover;
+   text-align: center;
+   padding: 140px 0;
+}
+
+.hero h2 {
+   font-size: 38px; 
+   margin-bottom: 10px;
+}
+
+.hero p {
+   font-size: 28px;
+   margin-bottom: 10px;
+}
+
+/* Search Box */
+.search-box {
+   max-width: 550px;
+   margin: 15px auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.search-box input {
+   width: 70%;
+   padding: 10px;
+   font-size: 16px;
+}
+
+.search-box button {
+   padding: 10px;
+   font-size: 16px;
+}
+
+/* Sections */
+section {
+   text-align: center;
+   font-size: x-large;
+   padding-top: 30px;
+   background-color: rgba(207, 234, 243, 0.989);
+   background-size: contain;
+   padding-right: 10px;
+}
+
+/* Recipes Section */
+.RECIPES {
+   padding: 50px 50px;
+}
+
+.RECIPES H2 {
+   text-align: center;
+   font-size: 45px; 
+}
+
+.RECIPES h3 {
+   margin-bottom: 30px;
+   background-color: rgb(132, 112, 150);
+}
+
+/* Recipe Cards */
+.RECIPE-SECTION {
+   width: 90%;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   column-gap: 10px;
+   row-gap: 10px;
+   transition: all 200ms ease-in-out;
+}
+
+.recipe-card {
+   margin: 30px, 10px;
+   border-radius: 8px;
+   border: 1px solid black;
+   overflow: hidden;
+   background-color: rgb(101, 133, 133);
+   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+   transition: all 200ms ease-in-out;
+}
+
+.recipe-card img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+
+.recipe-card h2 {
+   font-size: 22px;
+   padding: 10px;
+}
+
+.recipe-card p,.cookies-card p {
+   font-size:15px;
+   padding: 15px;
+   transition: all 200ms ease-in-out;
+}
+
+/* Section for other categories like cookies, shakes, breads, pastries, india */
+.cookies, .shakes, .breads, .pastries, .india {
+   padding: 50px 50px;
+}
+
+.cookies h3, .shakes h3, .breads h3, .pastries h3, .india h3 {
+   margin-bottom: 30px;
+   background-color: rgb(127, 110, 144);
+}
+
+.cookies-section, .shakes-section, .breads-section, .pastry-section, .india-section {
+   width: 90%;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   column-gap: 10px;
+   row-gap: 10px;
+   transition: all 200ms ease-in-out;
+}
+
+/* Card Styles for Other Sections */
+.cookies-card, .shakes-card, .bread-card, .pastry-card, .india-card {
+   margin: 30px, 10px;
+   border-radius: 8px;
+   border: 1px solid black;
+   overflow: hidden;
+   background-color: rgb(101, 133, 133);
+   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+   transition: all 200ms ease-in-out;
+}
+
+.cookies-card img, .shakes-card img, .bread-card img, .pastry-card img, .india-card img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+
+.cookies-card h2, .shakes-card h2, .bread-card h2, .pastry-card h2, .india-card h2 {
+   font-size: 22px;
+   padding: 20px;
+}
+
+/* Footer */
+footer {
+   text-align: center;
+   padding: 1.5rem;
+   background-color: #333;
+   color: #fff;
+}
+
+/* Modal Styling */
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+   background-color: #fefefe;
+   margin: 10% auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 300px;
+   border-radius: 10px;
+   position: relative;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   font-size: 24px;
+   cursor: pointer;
+}
+
+.tab-buttons {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 15px;
+}
+
+.tab-buttons button {
+   background-color: #ddd;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+}
+
+.tab-buttons button:hover, .tab-buttons button.active {
+   background-color: #ccc;
+   font-weight: bold;
+}
+
+.form-content {
+   display: flex;
+   flex-direction: column;
+}
+
+.form-content input {
+   margin: 10px 0;
+   padding: 8px;
+   font-size: 16px;
+}
+
+.form-content button {
+   margin-top: 10px;
+   padding: 10px;
+   background-color: rgb(127, 110, 144);
+   color: black;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+}
+
+.form-content button:hover {
+   background-color: rgb(127, 110, 144);
+}
+
+/* Targeting the tab buttons for Login and Sign Up */
+#loginTab, #signUpTab {
+   color: black; /* Set the text color to black */
+   background-color: #f0f0f0; /* Optional: Set a background color to improve contrast */
+   border: none;
+   padding: 10px 20px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+/* Optional: Add a hover effect to improve visual feedback */
+#loginTab:hover, #signUpTab:hover {
+   background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+/*hover effect*/
+.recipe-card:hover, .cookies-card:hover, .shakes-card:hover, .bread-card:hover, .pastry-card:hover, .india-card:hover {
+   transform: scale(1.05);
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+   transition: transform 0.3s, box-shadow 0.3s;
+}
+button {
+   background-color: rgb(127, 110, 144);
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+   transform: translateY(-5px);
+   box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.recipe-text{
+   height: 0px;
+   visibility: hidden;
+   opacity: 0;
+   transition: all 200ms ease-in-out;
+   margin-top: 20px;
+   overflow: hidden;
+   overflow-y: auto;
+   transform: scale(0.8);
+   transform-origin: top left;
+   font-size: small;
+}
+
+.recipe-text ul{
+   list-style-type: circle;
+   list-style-position: inside;
+   text-align: left;
+   padding: 5px;
+}
+
+.recipe-text ul>li{
+   padding:5px;
+}
+
+
+.recipe-card:hover .recipe-text{
+   height: 150px;
+   visibility: visible;
+   opacity: 1;
+   transform: scale(1);
+}
+
+/* Hover effect for all card types */
+.recipe-card:hover .recipe-text,
+.cookies-card:hover .recipe-text,
+.shakes-card:hover .recipe-text,
+.bread-card:hover .recipe-text,
+.pastry-card:hover .recipe-text,
+.india-card:hover .recipe-text {
+   height: 150px;
+   visibility: visible;
+   opacity: 1;
+   transform: scale(1);
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List Generator</title>
+
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1818;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgb(30, 30, 30);
+    border-radius: 5px;
+    box-shadow: 0 0 10px white(224, 219, 224, 0.9);
+    color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: calc(100% - 110px);
+    padding: 10px;
+    border: 1px solid#8c6e97;
+    border-radius: 5px;
+    box-shadow: #f4f4f4;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #a991dd;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #796689;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+li.purchased {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.delete-btn {
+    background: #b695b8;
+    color: rgba(243, 240, 244, 0.826);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #382548;
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Shopping List</h1>
+        <input type="text" id="item-input" placeholder="Add a new item...">
+        <button id="add-item">Add Item</button>
+        <ul id="shopping-list"></ul>
+    </div>
+
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', () => {
+      const itemInput = document.getElementById('item-input');
+      const addItemButton = document.getElementById('add-item');
+      const shoppingList = document.getElementById('shopping-list');
+  
+      // Function to add a new item to the list
+      function addItem() {
+          const itemText = itemInput.value.trim();
+  
+          if (itemText !== '') {
+              const li = document.createElement('li');
+              li.textContent = itemText;
+  
+              // Create a purchased button
+              const purchasedButton = document.createElement('button');
+              purchasedButton.textContent = 'Purchased';
+              purchasedButton.className = 'purchased-btn';
+              purchasedButton.addEventListener('click', () => {
+                  li.classList.toggle('purchased');
+              });
+  
+              // Create a delete button
+              const deleteButton = document.createElement('button');
+              deleteButton.textContent = 'Delete';
+              deleteButton.className = 'delete-btn';
+              deleteButton.addEventListener('click', () => {
+                  shoppingList.removeChild(li);
+              });
+  
+              li.appendChild(purchasedButton);
+              li.appendChild(deleteButton);
+              shoppingList.appendChild(li);
+              itemInput.value = ''; // Clear the input
+          }
+      }
+  
+      // Add event listener to the button
+      addItemButton.addEventListener('click', addItem);
+  
+      // Allow pressing Enter to add item
+      itemInput.addEventListener('keypress', (event) => {
+          if (event.key === 'Enter') {
+              addItem();
+          }
+      });
+  });
+  
+  </script>
+
+
+</body>
+</html>

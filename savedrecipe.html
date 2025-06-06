@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Recipes</title>
+  <style>
+   /* Save and Unsave Buttons */
+.save-recipe-btn, .unsave-recipe-btn {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.unsave-recipe-btn {
+  background-color: #666;
+}
+
+.save-recipe-btn:hover {
+  background-color: #e5533f;
+}
+
+.unsave-recipe-btn:hover {
+  background-color: #555;
+}
+
+/* Remove Button */
+.remove-recipe-btn {
+  background-color: #644779;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.remove-recipe-btn:hover {
+  background-color: #644779;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Saved Recipes</h1>
+    <a href="DAINTYDELIGHTS.html">Back to Recipes</a>
+  </header>
+  <main id="saved-recipes-container">
+    <!-- Saved recipes will be dynamically inserted here -->
+  </main>
+  <script>
+   // Load Saved Recipes
+const savedRecipesContainer = document.getElementById('saved-recipes-container');
+let savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+
+function displaySavedRecipes() {
+  savedRecipesContainer.innerHTML = '';
+
+  if (savedRecipes.length > 0) {
+    savedRecipes.forEach((recipe, index) => {
+      const recipeCard = document.createElement('div');
+      recipeCard.classList.add('saved-recipe-card');
+      recipeCard.innerHTML = `
+        <h2>${recipe.title}</h2>
+        <div class="recipe-text">${recipe.content}</div>
+        <button class="remove-recipe-btn" data-index="${index}">Remove Recipe</button>
+      `;
+      savedRecipesContainer.appendChild(recipeCard);
+    });
+
+    // Attach event listeners to Remove buttons
+    document.querySelectorAll('.remove-recipe-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        const recipeIndex = button.getAttribute('data-index');
+        savedRecipes.splice(recipeIndex, 1);
+        localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
+        displaySavedRecipes();
+        alert('Recipe has been removed.');
+      });
+    });
+  } else {
+    savedRecipesContainer.innerHTML = '<p>No saved recipes yet!</p>';
+  }
+}
+
+// Initial load
+displaySavedRecipes();
+
+  </script>
+</body>
+</html>

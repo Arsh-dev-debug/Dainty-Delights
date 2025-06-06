@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="contact-form-container">
+        
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <h2>Get In Touch</h2>
+            <div class="form-group">
+                <input type="hidden" name="access_key" value="43faffbf-0cc7-4bb8-97a0-deedd67a8a68">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            
+            <div class="form-group">
+                <label for="feedback">Feedback (if any)</label>
+                <textarea id="feedback" name="feedback" placeholder="Share your feedback" rows="4"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="recipe">Would you like to share your own recipe?</label>
+                <select id="recipe" name="recipe">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            
+            <div class="form-group recipe-details" style="display: none;">
+                <label for="recipe-details">Recipe Details</label>
+                <textarea id="recipe-details" name="recipe-details" placeholder="Please share your recipe" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div id="thank-you-message" style="display:none;">
+            <h3>Thank you, <span id="user-name"></span>. Your form has been submitted!</h3>
+        </div>
+    </div>
+    <div class="linking">
+        <a href="DAINTYDELIGHTS.html">Back to homepage</a>
+    </div>
+
+    <script src="contact.js"></script>
+</body>
+</html>
